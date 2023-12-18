@@ -1,0 +1,20 @@
+.border-container {
+    border: 2px solid #ccc; /* Define border properties */
+    padding: 20px; /* Add padding to create space between the border and form */
+    width: 500px; /* Define width for the border */
+    border-radius: 8px; /* Optional: Add border radius for rounded corners */
+    margin-left: 30%;
+    margin-top: 20px;
+
+
+}
+
+/* Center the placeholder text */
+.form-control::placeholder {
+    text-align: center;
+
+}
+a:hover{
+    color:#31d2f2;
+}
+

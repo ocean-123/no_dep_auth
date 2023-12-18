@@ -1,0 +1,11 @@
+package com.example.proj_auth_no_depn.Repo;
+
+import com.example.proj_auth_no_depn.Entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepo extends JpaRepository<User,Long> {
+
+    User findByEmail(String email);
+
+    boolean existsByEmail(String email);
+}

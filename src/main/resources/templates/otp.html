@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+  <div th:replace="fragment/links::links"></div>
+
+
+
+</head>
+<body>
+<div th:replace="fragment/header::header"></div>
+
+<div class="border-container">
+  <th:block th:if="${param.error}">
+    <p class="text-center text-danger fs-5">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+  </th:block>
+
+
+  <div class="login-form text-center">
+    <form id="loginForm" method="post" action="verifyOTP">
+
+      <div class="text-bg-info text-center"> Please Input Your OTP !</div>
+      <div class="form-group">
+        <label for="otp">OTO</label>
+        <input type="number" class="form-control" id="otp" name="verification" placeholder="Enter otp" required>
+      </div>
+<!--      <div class="form-group">-->
+<!--        <label for="password">Password</label>-->
+<!--        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>-->
+<!--        &lt;!&ndash;            <small class="form-text text-muted"><a href="#" id="showPassword">Show Password</a></small>&ndash;&gt;-->
+<!--      </div>-->
+      <button type="submit" class="btn btn-primary btn-block">Send</button>
+<!--      <div class="mt-2 text-center">-->
+<!--        <small>Don't have an account? <a href="/signup">Sign Up</a></small>-->
+<!--      </div>-->
+    </form>
+  </div>
+</div>
+</body>
+</html>

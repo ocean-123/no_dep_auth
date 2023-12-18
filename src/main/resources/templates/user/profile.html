@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Page</title>
+</head>
+<body>
+<div>
+    <h1>welcome  to  user page</h1>
+
+    <br>
+
+    <h5>[[${user.first_name}]]</h5>
+    <h5>[[${user.last_name}]]</h5>
+    <h5>[[${user.email}]]</h5>
+
+    <h5>[[${user.role}]]</h5>
+
+
+</div>
+
+
+<a href="/logout">Logout</a>
+
+</body>
+</html>
